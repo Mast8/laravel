@@ -1,0 +1,13 @@
+.tabla {
+	background-color: #3b3b5293;
+	color: rgb(46, 45, 45);
+	font-size: 85%;
+	margin-bottom: 0;
+  }
+  thead {
+	background-color: #486177;
+	color: #fff;
+  }
+  .tabla thead th {
+	border-bottom: 0;
+  }

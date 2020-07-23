@@ -48,16 +48,16 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'usuario' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-            'password_confirmation' => 'required|string|min:6',
+    // protected function validator(array $data)
+    // {
+    //     return Validator::make($data, [
+    //         'usuario' => 'required|string|max:255',
+    //         'email' => 'required|string|email|max:255|unique:users',
+    //         'password' => 'required|string|min:6|confirmed',
+    //         'password_confirmation' => 'required|string|min:6',
             
-        ]);
-    }
+    //     ]);
+    // }
 
     /**
      * Create a new user instance after a valid registration.
@@ -67,7 +67,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-      //register(Request $request);
         return User::create([
             'usuario' => $data['usuario'],
             'email' => $data['email'],
@@ -76,10 +75,15 @@ class RegisterController extends Controller
     }
 
     public function register(Request $request) {
+        
+        $this->validate( $request, [
+        'usuario' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users',
+        'password' => 'required|string|min:6|confirmed',
+        'password_confirmation' => 'required|string|min:6',
+         ]);
+         
         $input = $request->all();
-        $validator = $this->validator($input);
-  
-        if ($validator->passes()){
           $user = $this->create($input)->toArray();
           $user['link'] = str_random(30);
   
@@ -91,8 +95,6 @@ class RegisterController extends Controller
           });
           return redirect()->to('login')->with('success',
           "Se le envio un mensaje de confirmacion, por favor revise su correo");
-        }
-        return back()->with('errors', $validator->errors());
     }
   
       public function activar($token){

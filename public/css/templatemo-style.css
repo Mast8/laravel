@@ -15,7 +15,10 @@ body {
   background-color: #4e657a;
   overflow-x: hidden;
 }
-h1 { color: #8f9595; }
+h1 { 
+  color: #8f9595; 
+  text-align: center;
+}
 h4 { color: #c7d4d4; }
 
 h5 {
@@ -175,6 +178,14 @@ button:focus {
   margin-top: 0;
   border: 0;
 }
+
+.row {
+  padding: 0 50px;
+  /* margin: 0 2rem; */
+}
+
+
+
 .tm-content-row {
   justify-content: space-between;
   margin-left: -20px;
@@ -326,7 +337,6 @@ thead {
 .tm-list-group > li {
   list-style-type: none;
   position: relative;
-  cursor: pointer;
   transition: all 0.3s ease;
   padding: 8px;
 }
@@ -419,6 +429,7 @@ table tr:hover td {
 }
 .tm-bg-primary-dark {
   background-color: #435c70;
+  margin: 1rem 0;
 }
 .tm-bg-gray {
   background-color: rgba(0, 0, 0, 0.05);

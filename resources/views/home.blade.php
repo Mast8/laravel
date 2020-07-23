@@ -10,6 +10,7 @@
                 <div class="panel-heading">Home</div>
 
                 <div class="panel-body">
+                    <div class="tm-list-group">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -31,7 +32,7 @@
                     </li>
                     
                         Todas estas funcionalidades y mas estan a su disposición.
-                    
+                    </div>
                      
                 </div>
 

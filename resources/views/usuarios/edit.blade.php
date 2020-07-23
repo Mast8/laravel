@@ -4,10 +4,10 @@
 
 @section('content')
 
-<h1 align=center> Datos personales </h1>
+<h1> Datos personales </h1>
 
 <div class="row">
-    <div class="col-md-8">
+    
         <form method="post" action="{{ route('usuarios.update') }}">
                 {{ csrf_field() }}
 
@@ -62,11 +62,10 @@
 
         </form>
     </div>
-</div>  
 
-    <div class="col-md-4">
+
         <div class="tm-bg-primary-dark tm-block">
-            <h5>Opcion <h5>
+            <h4>Opcion <h4>
        
                 <a  onclick="return confirm
                 ('¿Desea eliminar su cuenta? Se eliminara toda la informacion relacionada')"
@@ -75,8 +74,7 @@
                 </a> 
       
         </div>
-    </div>  
-
+</div>  
 
        
    

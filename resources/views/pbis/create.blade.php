@@ -4,7 +4,6 @@
 
 
 <div class="row">
-    <div class="col-md-8">
       
      
     <h1>Nueva historia de usuario  </h1>
@@ -113,7 +112,6 @@
           </form>
 
 
-      </div>
 </div>
 
 

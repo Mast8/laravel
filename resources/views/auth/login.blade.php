@@ -10,10 +10,9 @@
     <title>Sign in</title>
 </head>
 
-
-
 <body>
-<div class="container">
+    
+    <div class="container">
 
         <form  method="POST" action="{{ route('login') }}">
             {{ csrf_field() }}
@@ -23,8 +22,7 @@
 
                     <input id="email" type="email" class="form-control" 
                     name="email" value="{{ old('email') }}" placeholder="Enter your email"
-                    required >
-
+                     autofocus>
                     @if ($errors->has('email'))
                         <span class="help-block">
                             <strong>{{ $errors->first('email') }}</strong>
@@ -35,52 +33,40 @@
             <div class="form-control{{ $errors->has('password') ? ' has-error' : '' }}">
                 <label for="password" class="col-md-4 control-label">Password</label>
 
-
                     <input id="password" type="password" class="form-control" 
-                    name="password" placeholder="Enter your password" required>
-
+                    name="password" placeholder="Enter your password" >
                     @if ($errors->has('password'))
                         <span class="help-block">
                             <strong>{{ $errors->first('password') }}</strong>
                         </span>
                     @endif
-
             </div>
-            
 
-           
-                    <button type="submit" class="btn btn-primary">
-                        Login
-                    </button>
-
-                    <small>Don't have an account? <a href="{{ route('register') }}">Sign up</a></small>
+            <button type="submit" class="btn btn-primary">
+                Login
+            </button>
+            <small>Don't have an account? <a href="{{ route('register') }}">Sign up</a></small>
         </form>
         
         <div class="features">
             <div class="feature">
                 <i class="fas fa-code"></i>
                 <h3>Development</h3>
-                <p>A modern and clean design system for 
-                    developing fast and powerful web interfaces.</p>
+                <p>A modern and clean design system to help 
+                    developing projects.</p>
             </div>
             <div class="feature">
                 <i class="fas fa-gift"></i>
                 <h3>Features</h3>
-                <p>A modern and clean design system for 
-                    developing fast and powerful web interfaces.</p>
+                <p>Create your project, invite people, create sprints, tasks, upload and download prof of 
+                    progress and see pdf reports.</p>
             </div>
             <div class="feature">
                 <i class="fas fa-edit"></i>
-                <h3>Updates</h3>
-                <p>A modern and clean design system for 
-                    developing fast and powerful web interfaces.</p>
-            </div>
-        </div>
-
-    </div>
+                <h3>Try it!</h3>
+                <p>Register and try all the work done and give us some feedback.</p>
             </div>
         </div>
     </div>
-</div>
 </body>
 </html>

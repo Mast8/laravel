@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script defer src="{{asset('js/theme.js')}}"></script>
-
-
-
 
     <link rel="stylesheet" href="{{ asset ('font-awesome-5/css/fontawesome-all.min.css')}}">
     <!-- https://fontawesome.com/ -->
@@ -37,7 +33,8 @@
 
 
     <link rel="stylesheet" href="{{asset ('css/templatemo-style.css')}}">
-   
+    <link id="theme-style" rel="stylesheet" type="text/css" href="">
+
 
 </head>
 
@@ -89,6 +86,15 @@
 
     </div>
 
+    <h2>Change theme color</h2>
+    <div id="theme-options-wrapper">
+      
+      <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+      <div data-mode="light" id="light-mode" class="theme-dot"></div>
+      <div data-mode="green" id="green-mode" class="theme-dot"></div>
+      <div data-mode="silver" id="silver-mode" class="theme-dot"></div> 
+  </div>
+
     <footer class="tm-footer row tm-mt-small">
         <div class="col-12 font-weight-light">
             <p class="text-center text-white mb-0 px-4 small"> 
@@ -99,6 +105,16 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/nav.js') }}"></script>
+    
+    <script type="text/javascript">
+      var light = '{{ URL::asset('css/ligthTheme.css') }}';
+      var green = '{{ URL::asset('css/greenTheme.css') }}';
+      var silver = '{{ URL::asset('css/silverTheme.css') }}';
+    </script>
+    <script src="{{ asset('js/themeColor.js') }}"></script>
     @yield('jqueryScript')
+
+    
 </body>
+
 </html>

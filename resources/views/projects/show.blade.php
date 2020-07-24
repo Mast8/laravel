@@ -95,9 +95,6 @@
                     aria-hidden="true"></i> Crear nuevo proyecto</a>
                   </li>
     
-                  <li> <a href="/projects"><i class="fa fa-briefcase" 
-                      aria-hidden="true"></i> Mis proyectos</a>
-                  </li>
                 <br/>
                 
                

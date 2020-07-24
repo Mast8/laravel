@@ -4,9 +4,9 @@
 
 <div class="row">
     <div class="col-md-8">
-        <h3>Historias del sprint <b>  </b></h3>
+        <h2>Historias del sprint </h2>
 
-        <table width="100" class="table">
+        <table width="50" class="table">
                 <thead>
                     <tr>
                         <th ><strong> HISTORIA </strong></th>

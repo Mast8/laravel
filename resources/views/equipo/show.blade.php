@@ -11,7 +11,7 @@
             <h4>Miembros registrados  {{$num_miembros}} </h4>
             @if( $num_miembros > 0 ) 
 
-    <table width="100" class="table table-striped table-hover table-reflow">
+    <table width="100" class="table">
         <thead>
             <tr>
                 <th ><strong> USUARIO </strong></th>
@@ -57,19 +57,18 @@
                 {{ csrf_field() }}
                 <div class="input-group{{ $errors->has('email') ? ' has-error' : '' }}">
                 
-                <input class="form-control" name = "project_id" id="project_id" 
-                value="{{$project->id}}" type="hidden">
-                {{--<div class="input-group"> --}}
-                
-                <input type="text" required class="form-control" id="email"  
-                name ="email" placeholder="Email">
-                @if ($errors->has('email'))
-                    <span class="help-block">
-                        <strong>{{ $errors->first('email') }}</strong>
-                    </span>
-                @endif 
+                    <input class="form-control" name = "project_id" id="project_id" 
+                    value="{{$project->id}}" type="hidden">
+                    {{--<div class="input-group"> --}}
+                    
+                    <input type="text" required class="form-control" id="email"  
+                    name ="email" placeholder="Email">
+                    @if ($errors->has('email'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif 
 
-                
                     <button class="btn btn-primary" type="submit" id="addMember" >Añadir</button>
                
                 </div>

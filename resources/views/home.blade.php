@@ -1,11 +1,10 @@
 @extends('layouts.app')
-
 @section('content')
+
 <h1 align=center>
     Home
 </h1>
 
-    
             <div class="panel panel-default">
                 <div class="panel-heading">Home</div>
 
@@ -36,12 +35,8 @@
                      
                 </div>
 
-                    {{-- <div class="col-sm-5 col-md-5 col-lg-5 pull-right">
-                        <div class="well well-lg" >
-                            Proyectos 
-                        </div>
-                    </div> --}}
                    
             </div>
 
+            
 @endsection

@@ -5,6 +5,57 @@ Product Admin CSS Template
 https://templatemo.com/tm-524-product-admin
 
 */
+:root{
+  --mainColor:#4e657a;
+  --footer: #567086;
+  --btnDanger: #be190d;
+  --btnDangerHover: #be190d;
+  --btnDangerBorder: #be190d;
+  --formInput: #4C5A6D;
+  --formFocus: #60738e;
+}
+/* 
+h3 {
+  text-align: center;
+  color: var(--footer);
+} */
+#theme-options-wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+.theme-dot{
+	height: 30px;
+	width: 30px;
+	background-color: black;
+	/* border-radius: 50%; */
+	margin: 5px;
+	border:2px solid var(--themeDotBorder);
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	cursor: pointer;
+}
+
+.theme-dot:hover{
+	border-width: 5px;
+}
+
+#light-mode{
+	background-color: #fff;
+}
+
+#blue-mode{
+	background-color: #062746;
+}
+
+#green-mode{
+	background-color: #365717;
+}
+
+#silver-mode{
+	background-color: rgb(85, 85, 94)
+}
 
 html {
   font-size: 16px;
@@ -12,18 +63,24 @@ html {
 }
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  background-color: #4e657a;
+  background-color: var(--mainColor);;
+  /* background-color: #fff; */
+  /*  */
   overflow-x: hidden;
 }
 h1 { 
   color: #8f9595; 
   text-align: center;
 }
-h4 { color: #c7d4d4; }
+h2, h4 { 
+  text-align: center;
+  color: #c7d4d4; 
+}
 
 h5 {
   justify-content: center;
 }
+
 
 a {
   color: #d0dbdb;
@@ -310,7 +367,7 @@ thead {
   padding-right: 15px;
 }
 .form-control {
-  background-color: #4C5A6D;
+  background-color: var(--formInput);
   color: #fff;
   border: 0;
 }
@@ -318,7 +375,7 @@ thead {
   color:rgb(182, 178, 178);
 }
 .form-control:focus {
-  background-color: #60738e;
+  background-color: var(--formFocus);
   color: #fff;
   border-color: transparent;
   box-shadow: 0 0 0 0.1rem rgb(180, 206, 233, 0.5);
@@ -327,6 +384,7 @@ thead {
   color: #fff;
   margin-bottom: 10px;
 }
+
 .tm-hide-sm {
   display: block;
 }
@@ -367,6 +425,7 @@ thead {
   padding: 13px 28px;
   transition: all 0.2s ease;
   max-width: 100%;
+  /* margin: 0 1rem; */
 }
 .btn-small {
   padding: 10px 24px;
@@ -387,15 +446,20 @@ thead {
 
 .btn-danger {
   color: #fff;
-  background-color: #be190d;
-  border: 2px solid #be190d;
+  background-color: var(--btnDanger);
+  border: 2px solid var(--btnDangerBorder);
   font-size: 90%;
   font-weight: 600;
 }
 .btn-danger:active,
 .btn-danger:hover {
-  color: #be190d;
+  color: var(--btnDangerHover);
   background-color: transparent;
+  
+}
+
+.btn-group {
+  margin: 0 1rem;
   
 }
 
@@ -547,12 +611,14 @@ input[type="checkbox"]:focus {
   color: #9f1321;
 }
 .tm-footer {
-  background-color: #567086;
+  background-color: var(--footer);
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
   -webkit-box-shadow: 0 -3px 5px 0 rgba(69, 92, 113, 0.59);
   -moz-box-shadow: 0 -3px 5px 0 rgba(69, 92, 113, 0.59);
   box-shadow: 0 -3px 5px 0 rgba(69, 92, 113, 0.59);
+  margin-top: 1rem;
+  bottom: 0;
 }
 .custom-select {
   height: 50px;

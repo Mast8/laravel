@@ -1,0 +1,11 @@
+:root{
+    --mainColor:#107431;
+    --footer: #0a350f;
+    --btnDanger: #0b6b16;
+    --btnDangerHover: #0b6b16;
+    --btnDangerBorder: #0a350f;
+  }
+
+  h1, h2, h3, h4, p {
+    color: #021805;
+  }

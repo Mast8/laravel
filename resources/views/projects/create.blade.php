@@ -5,7 +5,7 @@
 
 
 
-  <h1>Crear nuevo proyecto </h1>
+  <h1>Create new project </h1>
 
   <div class="row">
       <div class="col-md-8">
@@ -15,7 +15,7 @@
 
 
               <div class="form-group{{ $errors->has('nombre') ? ' has-error' : '' }}">
-                  <label for="project-name">Nombre<span class="required">*</span></label>
+                  <label for="project-name">Name<span class="required">*</span></label>
                   <input   placeholder="Nombre del proyecto"  
                             id="project-name"
                             required
@@ -32,7 +32,7 @@
               </div>
 
               <div class="form-group">
-                  <label for="project-content">Descripción</label>
+                  t<label for="project-content">Descripcion</label>
                   <textarea placeholder="Descripción del proyecto" 
                             style="resize: vertical" 
                             id="project-content"
@@ -52,10 +52,10 @@
 
       <div class="col-md-4">
           <div class="tm-bg-primary-dark tm-block">
-            <h4>Opciones</h4>
+            <h4>Option</h4>
             <ol class="list-unstyled">
               <li><a href="/projects"><i class="fa fa-briefcase" 
-                aria-hidden="true"></i> Mis proyectos</a></li>
+                aria-hidden="true"></i> My projects</a></li>
             </ol>
           </div>
       </div>

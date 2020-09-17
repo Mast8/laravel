@@ -56,6 +56,10 @@ label, p, small, h3 {
     color: #fff;
 }
 
+input {
+    color: #2762eb;
+}
+
 input:not([type="checkbox"]) {
     background-color: transparent;
     border: 2px solid #ecf2ff;

@@ -2,17 +2,17 @@
 
 @section('content')
 <div class="row tm-content-row">
-    <h1 align=center> Proyectos </h1> 
+    <h1 align=center> Projects </h1> 
     
     @if(count($projects) < 1 )
-        <h2 align=center> No tiene proyectos, comience creando uno </h2>
+        <h2 align=center> You do not have projects, create one </h2>
     @endif
     <div class="col-md-4">
         <div class="panel panel-default ">
-            <div class="panel-heading" >  <h5>Mis Proyectos</h5>
+            <div class="panel-heading" >  <h5>My Projects</h5>
                 <a  class="btn btn-primary btn-sm"  
                     href="/projects/create">
-                    Crear </a> 
+                    Create </a> 
             </div>
             <div class="panel-body" >
                 <ul class="list-group">
@@ -31,7 +31,7 @@
     <div class="col-md-4">
         <div class="panel panel-info ">
             <div class="panel-heading">  
-                <p class="text-white">Invitado a </p> 
+                <p class="text-white">Invited to: </p> 
             </div>
 
             <div class="panel-body" >

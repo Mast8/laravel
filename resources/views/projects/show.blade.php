@@ -17,26 +17,26 @@
         
           <a href="{{ route('sprints.store', ['idproyecto' => $project->id]) }}" 
             class="pull-left btn btn-primary btn-sm">
-            Crear sprint
+            Create sprint
           </a> 
 
           @if( count($sprints) > 0 ) 
             <a href="{{ route('pbis.create', ['idProyecto' => $project->id]) }}" 
               class="pull-right btn btn-primary btn-sm">
-              Crear historia 
+              Create historia 
             </a>
           @else
-            <h1>Primero debe crear sprints para registrar las historias de usuario</h1>
+            <h1> You need to create one sprint first so you could create user stories </h1>
           @endif
 
       @if( count($pbis) > 0 ) 
       <table width="100" class="table">
           <thead>
               <tr>
-                  <th ><strong> HISTORIA </strong></th>
-                  <th ><strong> SPRINT </strong></th>
-                  <th ><strong> ESTIMACIÓN </strong></th>
-                  <th ><strong> PRIORIDAD </strong></th>
+                  <th ><strong> Title </strong></th>
+                  <th ><strong> Sprint </strong></th>
+                  <th ><strong> Estimate </strong></th>
+                  <th ><strong> Priority </strong></th>
               </tr>
           </thead>
           <tbody>
@@ -49,11 +49,11 @@
 
                       <td>  
                           @if($pbi->prioridad_id == 3)
-                              Baja
+                              Small
                                 @elseif($pbi->prioridad_id == 2)
-                                  Media
+                                  Medium
                                     @else
-                                        Alta
+                                        High
                           @endif  
                       </td>
                       
@@ -74,25 +74,25 @@
                 <ol class="list-unstyled">
 
                   <li><a href="/projects/{{ $project->id }}/papelera/historias"><i class="fa fa-trash" 
-                    aria-hidden="true"></i> Papelera de historias</a>
+                    aria-hidden="true"></i> Deleted Histories </a>
                   </li>
 
                   <li><a href="/projects/{{ $project->id }}/papelera/tareas"><i class="fa fa-trash" 
-                    aria-hidden="true"></i> Papelera de tareas</a>
+                    aria-hidden="true"></i> Deleted tasks</a>
                   </li>
 
                   <li>
                     <a href="/projects/{{ $project->id }}/edit">
                     <i class="fa fa-edit" aria-hidden="true"></i> 
-                    Editar</a>
+                    Edit</a>
                   </li>
     
                   <li> <a href="/proyecto/{{ $project->id }}/miembros"><i class="fa fa-users" 
-                    aria-hidden="true"></i> Miembros</a>
+                    aria-hidden="true"></i> Members</a>
                   </li>
     
                   <li><a href="/projects/create"><i class="fa fa-plus" 
-                    aria-hidden="true"></i> Crear nuevo proyecto</a>
+                    aria-hidden="true"></i>  Create new project </a>
                   </li>
     
                 <br/>
@@ -112,7 +112,7 @@
                           }
                               "
                               >
-                      Eliminar
+                      Delete
                   </a>
     
                   <form id="delete-form" action="{{ route('projects.destroy',[$project->id]) }}" 
@@ -125,21 +125,21 @@
                 @endif
 
               <h4>  <i class="fa fa-print" 
-              aria-hidden="true"></i> Reportes</h4>
+              aria-hidden="true"></i> Reports</h4>
                 <li>
-                  <a href="{{ $project->id }}/reporte/sprints" > Reporte Sprints</a> 
+                  <a href="{{ $project->id }}/reporte/sprints" > Sprints</a> 
                 </li>
                 <li>
-                  <a href="{{ $project->id }}/reportes" > Reporte Historias</a> 
+                  <a href="{{ $project->id }}/reportes" > User stories</a> 
                 </li>
                 <li>
-                    <a href="{{ $project->id }}/reporte/tareas" > Reporte Tareas</a> 
+                    <a href="{{ $project->id }}/reporte/tareas" > Tasks </a> 
                 </li>
                 <li>
-                    <a href="{{ $project->id }}/reporte/tareas_estado" > Reporte Estado de Tareas</a> 
+                    <a href="{{ $project->id }}/reporte/tareas_estado" > Task's states </a> 
                 </li>
                 <li>
-                  <a href="{{ $project->id }}/reporte/equipo" > Reporte Equipo</a> 
+                  <a href="{{ $project->id }}/reporte/equipo" > Team</a> 
                 </li>
 
                 </ol>

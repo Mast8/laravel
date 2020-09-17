@@ -5,16 +5,16 @@
 
 
         <h1 align=center>
-            {{ $num_proyects }} Proyecto(s) registrado(s) 
+            {{ $num_proyects }} Number of projects
         </h1>
         @if($num_proyects>0)
         <table class="table">
             <thead>
                 <tr>
                     <th ><strong> ID </strong></th>
-                    <th ><strong> Proyecto </strong></th>
-                    <th ><strong> Descripción </strong></th>
-                    <th ><strong> Eliminar </strong></th>
+                    <th ><strong> Project </strong></th>
+                    <th ><strong> Description </strong></th>
+                    <th ><strong> Delete </strong></th>
                     
                 </tr>
             </thead>

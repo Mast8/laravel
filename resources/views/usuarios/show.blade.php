@@ -4,17 +4,17 @@
 
 
 <h1 align=center>
-    {{ count($usuarios)}} Usuarios registrados en el sistema
+    {{ count($usuarios)}} Number of users registered
 </h1>
 <table width="70"  class="table">
     <thead>
         <tr>
-            <th><strong> Usuario </strong></th>
+            <th><strong> User </strong></th>
             <th><strong> Email </strong></th>
-            <th><strong> Apellidos </strong></th>
-            <th><strong> Nombres </strong></th>
-            <th><strong> Eliminar </strong></th>
-            <th><strong> Estado cuenta </strong></th>
+            <th><strong> Last name </strong></th>
+            <th><strong> Name </strong></th>
+            <th><strong> Delete </strong></th>
+            <th><strong> Status </strong></th>
         </tr>
     </thead>
 

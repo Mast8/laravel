@@ -17,20 +17,19 @@
                     @endif
 
                     <h4>
-                        Bienvenido estimado {{ Auth::user()->usuario }}, este sistema web le permite 
-                        controlar  los requerimientos en sus proyectos, con las siguientes pero no limitadas funcionalidades    
+                        Welcome dear {{ Auth::user()->usuario }}, this web allows you to control 
+                        the requirements in your projects, with the following but not limited functionalities.  
                     </h4>
                     <li >
-                        ¿Desea invitar amigos?
+                        Want to invite team members?
                     </li>  
                     <li>
-                        ¿Revisar el progreso de su proyecto? 
+                        See the real progress
                     </li>
                     <li>
-                        ¿Administrar varios proyectos?
+                        Manage many projects at the same time?
                     </li>
-                    
-                        Todas estas funcionalidades y mas estan a su disposición.
+                        All and others functionalities are at your disposal.
                     </div>
                      
                 </div>

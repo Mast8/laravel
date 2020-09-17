@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1> Datos personales </h1>
+<h1> Personal information </h1>
 
 <div class="row">
     
@@ -14,7 +14,7 @@
 	    <input type="hidden" name="id_user" value="{{ $user->id }}">
 
     	<div class="form-group{{ $errors->has('usuario') ? ' has-error' : '' }}">
-    		<label>Usuario</label>
+    		<label>User</label>
             <input type="text" class="form-control"  
             name="usuario" value="{{    $user->usuario }}">
             @if ($errors->has('usuario'))
@@ -25,7 +25,7 @@
         </div>
         
         <div class="form-group{{ $errors->has('nombre') ? ' has-error' : '' }}">
-                <label>Nombres</label>
+                <label>Name</label>
                 <input type="text" class="form-control" placeholder="Nombres"
                 name="nombre" value="{{   $user->nombres }}">
                 @if ($errors->has('nombre'))
@@ -36,7 +36,7 @@
         </div>
 
         <div class="form-group{{ $errors->has('apellido') ? ' has-error' : '' }}">
-                <label>Apellidos</label>
+                <label>Last Name</label>
                 <input type="text" class="form-control" placeholder="Apellidos"
                 name="apellido" value="{{   $user->apellidos }}">
                 @if ($errors->has('apellido'))
@@ -47,7 +47,7 @@
         </div>
         
     	<div class="form-group">
-    		<label>Descripción</label>
+    		<label>Description</label>
             <textarea class="form-control my-editor" placeholder="Información acerca de ti"
             rows="4" id="task" name="descripcion">{{ $user->descripcion_user }}</textarea>
 		</div>
@@ -55,22 +55,22 @@
 	
 
         <div class="btn-group">
-            <input class="btn btn-primary" type="submit" value="Guardar">
+            <input class="btn btn-primary" type="submit" value="Save">
 
             <a class="btn btn-danger" 
-            href="{{ redirect()->getUrlGenerator()->previous() }}">Retroceder</a>
+            href="{{ redirect()->getUrlGenerator()->previous() }}">Return</a>
 
         </form>
     </div>
 
 
         <div class="tm-bg-primary-dark tm-block">
-            <h4>Opcion <h4>
+            <h4>Option <h4>
        
                 <a  onclick="return confirm
                 ('¿Desea eliminar su cuenta? Se eliminara toda la informacion relacionada')"
                     href="/usuarios/{{ $user->id }}/eliminar">  
-                    <i class="fa fa-power-off" aria-hidden="true"></i> Eliminar cuenta</a>
+                    <i class="fa fa-power-off" aria-hidden="true"></i> Delete account</a>
                 </a> 
       
         </div>
